@@ -2,28 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --base-100: #30313d;
+    --base-content: #ffffff;
+    --base-content-200: #f8f9fd;
+    --base-content-300: #dfe5eb;
+    --primary: #06ab78;
+    --secondary: #ffb74d;
+    --primary-content: #ffffff;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--base-content); /* Use the custom property for text color */
+  background-color: var(
+    --primary
+  ); /* Use the custom property for background color */
+}
+
+.tippy-box[data-theme~="tabx"] {
+  background-color: oklch(70.76% 0.197 46.46);
+  color: oklch(31.72% 0.021 281.35);
+}
+
+.tippy-box[data-theme~="tabx"] .tippy-arrow {
+  color: oklch(70.76% 0.197 46.46);
 }
 
 @layer utilities {

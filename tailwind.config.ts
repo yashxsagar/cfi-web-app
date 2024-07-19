@@ -7,14 +7,24 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+    extend: { fontFamily: { grotesque: "var(--font-grotesque" } },
   },
-  plugins: [],
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
+  daisyui: {
+    themes: [
+      {
+        custom: {
+          ...require("daisyui/src/theming/themes")["light"],
+          "base-100": "oklch(31.72% 0.021 281.35)",
+          "base-200": "oklch(47.42% 0.01 293.69)",
+          "base-content": "oklch(100% 0 0)",
+          primary: "oklch(70.76% 0.197 46.46)",
+          secondary: "oklch(82.87% 0.145 73.54)",
+          "secondary-content": "oklch(74.61% 0.168 63.1)",
+          "primary-content": "oklch(100% 0 0)",
+        },
+      },
+    ],
+  },
 };
 export default config;
