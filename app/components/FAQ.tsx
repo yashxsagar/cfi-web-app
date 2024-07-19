@@ -6,62 +6,56 @@ const FAQ = () => {
     <div className="py-24 max-w-7xl mx-auto px-0 md:px-4">
       <div className="flex flex-col md:flex-row gap-12">
         <div className="flex flex-col text-center md:text-left basis-1/3">
-          <p className="inline-block font-semibold text-primary mb-4 text-xl">
+          <p className="inline-block font-semibold text-primary-content mb-4 text-xl">
             FAQ
           </p>
-          <p className="text-4xl font-extrabold text-primary">
+          <p className="text-4xl font-extrabold text-accent-content/80">
             Frequently Asked Questions
           </p>
         </div>
         <section className="basis-2/3 text-secondary-content font-semibold text-left">
           <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
-            <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
+            <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
               Why do I need TabX?
             </div>
-            <div className="collapse-content text-secondary/70 font-thin">
+            <div className="collapse-content text-primary-content/70 font-thin">
               <p>
-                Are you someone who does research-heavy work on Chrome or works
-                on multiple Chrome tabs simultaneously? Well, then losing track
-                of the webpages across multiple tabs is easy. Reason is that our
-                brain capacity is finite. Also, often times the content
-                you&apos;re looking for by opening a new tab may already be
-                present in your existing Chrome tabs. Then why look it up or
-                navigate to it again. Simply put, think of TabX as an internal
-                search engine for filtering content across tabs that are already
-                open on your PC/Mac. This prevents you from cycing through tabs
-                and multiple rounds of Ctrl/Cmd+Fs.
+                Are you someone who's about to join a new job or switch gigs or
+                awaitng your appraisal. How do you know whether the comp offered
+                by your HR manager is fair or not? CompX does exactly that. It
+                tells you the competitiveness of your pay while drawing from
+                hard objective wage disclosures data from the US Dept. of Labor
               </p>
             </div>
           </div>
           <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
-            <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
-              Does it work only on Chrome?
+            <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
+              Does it work only with Notion?
             </div>
-            <div className="collapse-content text-secondary/70 font-thin">
+            <div className="collapse-content text-primary-content/70 font-thin">
               <p>
                 Yes, for now! Based on user feedback obtained on ProductHunt,
-                Reddit and Hacker News we&apos;ll launch it on other browsers as
-                well namely, Edge, Arc and Safari
+                Reddit and Hacker News we&apos;ll launch a web native version
               </p>
             </div>
           </div>
           <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
-            <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
+            <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
               Is it secure?
             </div>
-            <div className="collapse-content text-secondary/70 font-thin">
+            <div className="collapse-content text-primary-content/70 font-thin">
               <p>
-                Yes, it is secure. All components namely, the web app, the
-                chrome extension, the backend, the payment gateway and the
-                database have been configured and programmed with tight security
-                protocols and best practices
+                Yes, it is secure. All components namely, the Notion Public
+                Integration, the app backend and the database have been
+                configured and programmed with tight security protocols and best
+                practices
               </p>
             </div>
           </div>
-          <div className="collapse collapse-plus">
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               Why does auto highlight and scroll not work on certain tabs?
@@ -81,24 +75,23 @@ const FAQ = () => {
                 website layouts as possible{" "}
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
-            <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
+            <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
               What user data do you collect?
             </div>
-            <div className="collapse-content text-secondary/70 font-thin">
+            <div className="collapse-content text-primary-content/70 font-thin">
               <p>
-                We only collect data that enriches your usage of TabX - Profile
-                Data such as name, age range, email, profile picture when you
-                Login Via Google to personalize your experience; your search
-                history on TabX as we are building a dashboard where you can
-                view and delete your search history on TabX; your plan status -
-                Free or Pro to talor your usage of the extension{" "}
+                We only collect data that enriches your usage of CompX - Profile
+                Data such as name, email, profile picture when you Login Via
+                Notion to personalize your experience; entries you make on the
+                CompX Fairness Indicator page on Notion to determine and fetch
+                the Compensation fairness{" "}
               </p>
             </div>
           </div>
-          <div className="collapse collapse-plus">
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               Can I create a TabX account?
@@ -110,8 +103,8 @@ const FAQ = () => {
                 you must create an account to purchase the Pro plan and use it.
               </p>
             </div>
-          </div>
-          <div className="collapse collapse-plus">
+          </div> */}
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               What is your refund policy?
@@ -122,8 +115,8 @@ const FAQ = () => {
                 TabX Pro purchase. Simply write to us at tabindex1@gmail.com
               </p>
             </div>
-          </div>
-          <div className="collapse collapse-plus">
+          </div> */}
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               Can I search for content from tabs that are no longer open aka my
@@ -146,21 +139,21 @@ const FAQ = () => {
                 like navigating a maze!{" "}
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
-            <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
-              Is there a user dashboard on the TabX.io website?
+            <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
+              Is there a user dashboard on the CompX.io website?
             </div>
-            <div className="collapse-content text-secondary/70 font-thin">
+            <div className="collapse-content text-primary-content/70 font-thin">
               <p>
                 Yes! We&apos;re working on fleshing out a User Dashboard on our
                 website that&apos;ll allow you after login to view and delete
-                your search history, plan status and most used tabs on Chrome
+                your job search history, plan status and other features
               </p>
             </div>
           </div>
-          <div className="collapse collapse-plus">
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               I see a yellow warning aka Issue on my chrome dev console?
@@ -174,8 +167,8 @@ const FAQ = () => {
                 doesn&apos;t affect the extension&apos;s working
               </p>
             </div>
-          </div>
-          <div className="collapse collapse-plus">
+          </div> */}
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               TabX is not displaying search results from a certain tab or tabs?
@@ -209,8 +202,8 @@ const FAQ = () => {
                 chrome&apos;s power saver mode.
               </p>
             </div>
-          </div>
-          <div className="collapse collapse-plus">
+          </div> */}
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               What is the trial duration for TabX Pro aka content matches?
@@ -218,28 +211,125 @@ const FAQ = () => {
             <div className="collapse-content text-secondary/70 font-thin">
               <p>7 days from the date of installation</p>
             </div>
+          </div> */}
+          <div className="collapse collapse-plus">
+            <input type="checkbox" name="faq-accordion" />
+            <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
+              Can i edit the CompX Fairness Assessment Notion Page?
+            </div>
+            <div className="collapse-content text-primary-content/70 font-thin">
+              <p>
+                Please do not change page elements like Page Title, Page
+                Description and columne names such as Job Title, Location,
+                State, Fairness Indicator, Justification, etc. This will break
+                the integration with our database and prevent the app from
+                working as usual or stop working at all. Only make new job/comp
+                entries on fresh rows. In casse you want to refresh the results
+                of a particular job search/entry simplly delete the Fairness
+                Indicator value for that entry. Our systems will detect the
+                change and auto refresh the outcome values - Fairness Indicator,
+                Assessment Remarks and Justification PDF report for that search
+              </p>
+            </div>
           </div>
           <div className="collapse collapse-plus">
+            <input type="checkbox" name="faq-accordion" />
+            <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
+              Can I search for Job Role(s) that are not listed?
+            </div>
+            <div className="collapse-content text-primary-content/70 font-thin">
+              <p>
+                Unfortunately No!. You can only look up compensation assessment
+                for the ~275 odd Job Roles that we support and are listed in the
+                dropdown fo the Job Role column of the CompX Fairness Indication
+                Notion page. If you proceed to add custom Job Role(s) the app
+                won't be able to fetch the Compensation Assessment output for
+                those entries
+              </p>
+            </div>
+          </div>
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               Does it work in Incognito Mode?
             </div>
             <div className="collapse-content text-secondary/70 font-thin">
               <p>
-                Yup! Works like a charm. Enable TabX in{" "}
+                Yup! Works like a charm.
                 <Link href="" className="link">
                   Incognito
                 </Link>{" "}
                 mode
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="collapse collapse-plus">
+            <input type="checkbox" name="faq-accordion" />
+            <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
+              My CompX Fairness Indicator is not working on Notion
+            </div>
+            <div className="collapse-content text-primary-content/70 font-thin">
+              <p>
+                In case your CompX Fairness Indicator stops issuing outputs -
+                Fairness Indicator, Assessment Remarks and Justification
+                Report(s), it could be due to one of the following reasons -
+              </p>
+              <ol>
+                <li className="normal-nums">
+                  a. Stale Page - Simply refresh the Notion page to fix it
+                </li>
+                <li className="normal-nums">
+                  b. Changes made to the Notion Page components such as page
+                  title, page description, column names - Job Title, Location,
+                  State, Fairness Indicator or so on - Go to the{" "}
+                  <Link href="https://tabx.io">CompX</Link> website and hit{" "}
+                  <b>Login with Notion</b> to re-authenticate with Notion. Our
+                  app will embed a fresh copy of the CompX Fairness Indicator
+                  Notion page. Start making entries into it and it should detch
+                  outputs as usual. You may copy over the records/searches (Job
+                  Role, Location, State, Compensation Offered) from the previous
+                  version of the Notion page here as well and our system will
+                  update the assessment results for the same
+                </li>
+                <li className="normal-nums">
+                  c. Deleted Connection: If you delete the CompX - CFI
+                  connection from your Notion workspace and account from the
+                  tripe dot (•••) Menu on the top-right of your Notion
+                  workspace, the page will stop issuing compensation assessment
+                  for new records aka job entries. To fix it simply go to the{" "}
+                  <Link href="https://tabx.io">CompX</Link> website and hit{" "}
+                  <b>Login with Notion</b> button to re-authenticate with
+                  Notion, grant the requested permissions and on the final
+                  screen, choose option 2, titled{" "}
+                  <b>Select pages to share with CompX - CFI</b>. From the pages
+                  list, choose <b>CompX Fairness Indicator'</b> and you should
+                  be good to go - the Notion page will start issuing
+                  compensation assessment outputs
+                </li>
+              </ol>
+            </div>
+            <div className="collapse collapse-plus">
+              <input type="checkbox" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
+                Why is Notion requesting me to grant permissions to CompX CFI
+                again?
+              </div>
+              <div className="collapse-content text-primary-content/70 font-thin">
+                <p>
+                  Yes, it is secure. All components namely, the Notion Public
+                  Integration, the app backend and the database have been
+                  configured and programmed with tight security protocols and
+                  best practices
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-secondary/10">
               What about Keyboard Shortcuts?
             </div>
-            <div className="collapse-content text-secondary/70 font-thin">
+            <div className="collapse-content text-primary-content/70 font-thin">
               <div>
                 TabX supports the following keyboard shortcuts Out of the Box
                 <br />
@@ -269,7 +359,7 @@ const FAQ = () => {
                 </section>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
       </div>
     </div>

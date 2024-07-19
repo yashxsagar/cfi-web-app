@@ -1,6 +1,6 @@
 const Pricing = () => {
   return (
-    <div className="min-h-[60vh] bg-base-100 flex flex-col justify-normal items-center gap-y-20 overflow-visible">
+    <div className="min-h-[60vh] py-24 px-0 md:py-32 bg-base-100 flex flex-col justify-normal items-center space-y-24 md:space-y-32 overflow-visible">
       <section className="flex flex-col items-center gap-7">
         <div className="badge badge-primary badge-outline animate-pulse whitespace-nowrap">
           <svg
@@ -15,14 +15,14 @@ const Pricing = () => {
               clipRule="evenodd"
             />
           </svg>
-          Early Bird Discount
+          Early Bird Offer
         </div>
-        <h1 className="text-primary font-extrabold text-3xl text-center lg:text-6xl tracking-tight md:-mb-4">
-          Stop manually switching between Chrome tabs?
+        <h1 className="text-primary-content font-extrabold text-3xl text-center lg:text-6xl tracking-tight md:-mb-4">
+          Stop manually sifting through job descriptions on job sites
         </h1>
       </section>
-      <div className="flex flex-col md:flex-row w-full gap-10 p-4">
-        <div className="grid flex-grow card gap-5 bg-slate-700 rounded-box p-4">
+      <div className="flex flex-col md:flex-row md:w-6/12 gap-10 p-2 md:p-4">
+        {/* <div className="grid flex-grow card gap-5 bg-slate-700 rounded-box p-4">
           <div className="flex flex-wrap gap-2">
             <div className="flex flex-col justify-end mb-[4px] text-lg ">
               <p className="relative">
@@ -98,8 +98,8 @@ const Pricing = () => {
               {/* <span>
                 <span className="bg-primary/30 px-1">Content</span> Matches
               </span> */}
-            </li>
-            <li className="flex items-center gap-2">
+        {/* </li> */}
+        {/* <li className="flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -115,12 +115,12 @@ const Pricing = () => {
                     Auto Highlight and Scroll
                   </span>
                 </p>
-              </div>
-              {/* <span>
+              </div> */}
+        {/* <span>
                 <span className="bg-primary/30 px-1">Auto Highlight</span>
                 and Scroll
               </span> */}
-            </li>
+        {/* </li>
           </ul>
           <div className="space-y-2">
             <a
@@ -145,32 +145,32 @@ const Pricing = () => {
               Lifetime access to{" "}
               <span className="underline">Title & URL matches</span>
             </p>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         <div className="grid flex-grow card gap-5 bg-slate-900 border-primary border-2 rounded-box p-4">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             <span className="badge text-xs text-base-100 font-medium border-0 bg-primary whitespace-nowrap">
-              Heavy Chrome User&apos;s Choice
+              Ultimate Job Seeker&apos;s Choice
             </span>
           </div>
           <div className="flex flex-wrap gap-2">
             <div className="flex flex-col justify-end mb-[4px] text-lg ">
               <p className="relative">
                 <span className="absolute bg-base-content h-[1.5px] inset-x-0 top-[53%]"></span>
-                <span className="text-secondary-content">$ 25</span>
+                <span className="text-secondary-content">$ 15</span>
               </p>
             </div>
             <p className="text-5xl tracking-tight font-extrabold text-secondary-content">
-              $ 15
+              Free
             </p>
-            <div className="flex flex-col justify-end mb-[4px]">
+            {/* <div className="flex flex-col justify-end mb-[4px]">
               <p className="text-xs text-base-content/60 uppercase font-semibold">
                 USD
               </p>
-            </div>
+            </div> */}
           </div>
-          <ul className="space-y-2.5 leading-relaxed text-secondary flex-1">
+          <ul className="space-y-2.5 leading-relaxed text-accent-content/80 flex-1">
             <li className="flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ const Pricing = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              <span>Index unlimited Chrome Tabs</span>
+              <span>Search Unlimited Jobs</span>
             </li>
             <li className="flex items-center gap-2">
               <svg
@@ -199,7 +199,7 @@ const Pricing = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              <span>Title & URL matches</span>
+              <span>Works with Notion</span>
             </li>
             <li className="flex items-center gap-2">
               <svg
@@ -214,7 +214,7 @@ const Pricing = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              <span>Works in Incognito & Offline Modes</span>
+              <span>Fairness indicator and assessment remarks</span>
             </li>
             <li className="flex items-center gap-2">
               <svg
@@ -230,7 +230,8 @@ const Pricing = () => {
                 ></path>
               </svg>
               <span>
-                <span className="bg-primary/30 px-1">Content</span> Matches
+                <span className="bg-primary/30 px-1">Rolling Updates</span> to
+                Comp Database
               </span>
             </li>
             <li className="flex items-center gap-2">
@@ -247,8 +248,8 @@ const Pricing = () => {
                 ></path>
               </svg>
               <span>
-                <span className="bg-primary/30 px-1">Auto Highlight</span>
-                and Scroll
+                <span className="bg-primary/30 px-1">Justification PDF</span>
+                Report for comparison
               </span>
             </li>
           </ul>
@@ -257,7 +258,7 @@ const Pricing = () => {
               className="btn btn-primary btn-block group text-base-100"
               href="https://buy.stripe.com/eVa00O1Zmd5BeEobIJ?prefilled_promo_code=LAUNCH"
             >
-              Get TabX Pro
+              Get CompX
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -272,8 +273,10 @@ const Pricing = () => {
               </svg>
             </a>
             <p className="text-sm text-center text-primary font-medium relative">
-              One-time payment, then{" "}
-              <span className="underline">it&apos;s yours forever</span>
+              One-time sign up, then{" "}
+              <span className="underline">
+                it&apos;s yours till we monetize
+              </span>
             </p>
           </div>
         </div>

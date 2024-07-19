@@ -5,9 +5,14 @@ import ChromeSpinner from "@/public/images/ChromeSpinner.gif";
 const ProsCons = () => {
   return (
     <div className="min-h-[60vh] flex flex-col justify-normal items-center gap-y-16 md:gap-y-36 overflow-visible">
-      <h1 className="text-primary font-extrabold text-3xl text-center lg:text-6xl tracking-tight md:-mb-4">
-        Are you Tired of hitting Ctrl/Cmd+F?
-      </h1>
+      <div className="flex flex-col gap-y-20">
+        <h1 className="text-primary-content font-extrabold text-3xl text-center lg:text-6xl tracking-tight md:-mb-4">
+          Do you feel underpaid at your job?
+        </h1>
+        <p className="text-lg text-accent-content leading-relaxed max-w-xl mx-auto text-center">
+          Obtain a comparative assessment with a super user-friendly scale
+        </p>
+      </div>
       <div className="flex flex-col mx-4 md:flex-row gap-10">
         <div className="flex flex-col items-center">
           <Image src={chromeBomb} alt="chrome exploding" />

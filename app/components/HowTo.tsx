@@ -78,8 +78,8 @@ const HowTo = () => {
 
   return (
     <section className="min-h-[60vh] py-24 px-0 md:py-32 md:px-4 space-y-24 md:space-y-32 max-w-5xl mx-auto bg-base-100 ">
-      <h2 className="font-extrabold text-center text-primary text-4xl lg:text-5xl tracking-tight mb-12 md:mb-24">
-        Retreive your desired content SupaFast!
+      <h2 className="font-extrabold text-center text-primary-content text-4xl lg:text-5xl tracking-tight mb-12 md:mb-24">
+        Assess your true worth SupaFast!
       </h2>
       <div className="flex flex-col md:flex-row gap-12 md:gap-24">
         <div className="grid grid-cols-1 items-center gap-8 text-secondary-content align-middle sm:gap-12 lg:grid-cols-2 lg:gap-24">
@@ -95,13 +95,16 @@ const HowTo = () => {
                 // defaultChecked
               />
               <div className="collapse-title text-xl font-medium md:text-lg">
-                1. Fire up the TabX Extension
+                1. Login with Notion
               </div>
-              <div className="collapse-content text-secondary/70 font-thin">
+              <div className="collapse-content text-primary-content/70 font-thin">
                 <p>
-                  Just click on thr bright orange extension logo in the top
-                  right of your Chrome window. If it&apos;s not visible simply
-                  click on the Extensions logo and pin TabX
+                  Click on the <b>Login with Notion</b> button at the top of
+                  this page and you will be redirected to the Notion Login
+                  screen. Login to your Notion account, grant the requested
+                  permissions. Select the option -{" "}
+                  <b>Use a template provided by the developer</b> and hit Allow
+                  Access
                 </p>
               </div>
             </div>
@@ -115,12 +118,13 @@ const HowTo = () => {
                 checked={media === "two"}
               />
               <div className="collapse-title text-xl font-medium md:text-lg">
-                2. Type in your search keyword
+                2. Key in your Compensation
               </div>
-              <div className="collapse-content text-secondary/70 font-thin">
+              <div className="collapse-content text-primary-content/70 font-thin">
                 <p>
-                  Type the title, URL or any page content (Pro Users only) that
-                  you want search for
+                  On a new line aka row simply select your Job Title from the
+                  dropdown, hey in the Location (City or County), select the
+                  State and input the Compensation Offered (Annual Base Pay)
                 </p>
               </div>
             </div>
@@ -134,15 +138,14 @@ const HowTo = () => {
                 checked={media === "three"}
               />
               <div className="collapse-title text-xl font-medium md:text-lg">
-                3. Click on the desired search result
+                3. Get your Compensation Assessment
               </div>
-              <div className="collapse-content text-secondary/70 font-thin">
+              <div className="collapse-content text-primary-content/70 font-thin">
                 <p>
-                  Just click on any of the search results filtered and populated
-                  in the extension body and Viola! Your chosen tab is now in
-                  focus and the your search keyword is highlighted in the
-                  focused tab (works only when you select a result from the
-                  Content Matches section)
+                  Simply wait for ~10 seconds and Viola! Get your compensation
+                  fairnes assessment as the following 3 outputs in the adjoining
+                  columns - Fairness Indicator, Assessment Remarks and a
+                  Justification PDF report
                 </p>
               </div>
             </div>
