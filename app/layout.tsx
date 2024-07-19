@@ -10,9 +10,9 @@ const grotesque = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Ctrl+F on steroids",
+  title: "PayUp Bro!",
   description:
-    "A Fuzzy Finder for your webspace. TabX is a Chrome extension for indexing and filtering open Chrome Tabs in a user's machine based on a user provided search query. This is meant to improve and expedite information retrieval at a user's whim. It's helpful verified utility for professionals like software devs, students, researchers, lawyers, copywriters, etc. for whom fast and accurate knowledge retention and retrieval is of utmost importance but they can't keep 100s of Chrome tabs open all the time on their machine due to RAM limitations",
+    "A simple and highly accurate compensation asessment tool for professionals in the US",
 };
 
 export default function RootLayout({

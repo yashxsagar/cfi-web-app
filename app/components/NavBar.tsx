@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import tabXProLogo from "@/public/images/tabXProLogo.png";
+import compXLogo from "@/public/images/CompXLogo.png";
 import Image from "next/image";
 
 const NavBar = () => {
@@ -10,18 +10,18 @@ const NavBar = () => {
       <Link
         href="/"
         prefetch={false}
-        className="flex flex-row gap-3 text-lg font-bold"
+        className="flex flex-row gap-1 md:gap-3 items-center text-lg font-bold"
       >
         <Image
-          src={tabXProLogo}
+          src={compXLogo}
           alt="App Logo"
           //   height={"26"}
           //   width={"30"}
-          className="h-7 w-8"
+          className="h-10 w-11"
         />
-        <h1 className="font-semibold">TabX</h1>
+        <h1 className="font-semibold">CompX</h1>
       </Link>
-      <ul className="flex flex-row disc list-none gap-14">
+      <ul className="flex flex-row disc justify-center list-none gap-8 md:gap-14 ">
         <li>
           <Link href="/">Pricing</Link>
         </li>
@@ -29,7 +29,7 @@ const NavBar = () => {
           <Link href="/">FAQ</Link>
         </li>
       </ul>
-      <button className="btn bg-slate-100 btn-sm text-base-100 hover:bg-slate-300">
+      <button className="btn bg-slate-100 btn-sm text-base-100 ml-3 md:ml-6 hover:bg-slate-300">
         Login
       </button>
     </div>

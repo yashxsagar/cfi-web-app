@@ -6,8 +6,8 @@
   :root {
     --base-100: #30313d;
     --base-content: #ffffff;
-    --base-content-200: #f8f9fd;
-    --base-content-300: #dfe5eb;
+    --accent-content: #f8f9fd;
+    --neutral-content: #dfe5eb;
     --primary: #06ab78;
     --secondary: #ffb74d;
     --primary-content: #ffffff;

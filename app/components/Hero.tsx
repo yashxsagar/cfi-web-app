@@ -21,36 +21,37 @@ const Hero = () => {
   ];
   return (
     <div className="min-h-[60vh] flex flex-col justify-normal items-center gap-y-20 overflow-visible">
-      <h1 className="text-primary font-extrabold text-3xl text-center lg:text-6xl tracking-tight md:-mb-4">
-        {"Retreive Knowledge from your Chrome tabs in seconds,"}{" "}
+      <h1 className="text-base-content font-extrabold text-3xl text-center lg:text-6xl tracking-tight md:-mb-4">
+        {"Assess the fair value of your job and get paid,"}{" "}
         <br className="hidden md:block" />
         <span className="relative whitespace-nowrap">
-          <span className="absolute bg-primary -left-1 -top-0 -bottom-1 -right-2 md:-left-3 md:-top-0 md:-bottom-0 md:-right-3 -rotate-1"></span>
-          <span className="relative text-neutral">{"not hours"}</span>
+          <span className="absolute bg-base-content -left-1 -top-0 -bottom-1 -right-2 md:-left-3 md:-top-0 md:-bottom-0 md:-right-3 -rotate-1"></span>
+          <span className="relative text-neutral">{"not played!"}</span>
         </span>
       </h1>
-      <p className="text-lg text-secondary-content leading-relaxed max-w-xl mx-auto text-center">
-        Enjoy deeper content retrieval and discovery without having to manually
-        cycle through tabs and countless rounds of Ctrl+Fs
+      <p className="text-lg text-accent-content leading-relaxed max-w-xl mx-auto text-center">
+        Get instant clarity on what your peers are getting paid in your area for
+        the same job role
       </p>
       <div className="grid justify-items-center">
-        <ul className="grid-cols-2 justify-items-center gap-2 text-secondary -m-7">
+        <ul className="grid-cols-2 justify-items-center gap-2 text-neutral-content -m-7">
           <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} /> Filter tabs by title, url and
-            content
+            <CheckMark color={"#03fcbe"} /> Use the tool inside your Notion
+            workspace
           </li>
           <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} /> Works in online and offline modes
+            <CheckMark color={"#03fcbe"} /> Obtain super easy-to-understand
+            fairness remarks
           </li>
           <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} /> Save time spent on hovering over
+            <CheckMark color={"#03fcbe"} /> Save time spent on cycling through{" "}
             <br className="md:hidden" />
-            tiny tab titles
+            Glassdoor and LinkedIn JDs
           </li>
         </ul>
       </div>
-      <button className="btn btn-primary flex flex-row gap-1 align-middle items-center content-center justify-item text-base-200 text-base sm:w-4/12 md:w-2/12 group">
-        Get TabX
+      <button className="btn btn-primary flex flex-row gap-1 align-middle items-center content-center justify-item text-primary-content text-base sm:w-4/12 md:w-3/12 group">
+        Login with Notion
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5 transition-transform duration-400 group-hover:scale-125"
