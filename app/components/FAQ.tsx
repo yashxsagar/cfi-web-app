@@ -17,7 +17,7 @@ const FAQ = () => {
           <div className="collapse collapse-plus">
             <input type="checkbox" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium border-t md:text-lg border-primary-content/10">
-              Why do I need TabX?
+              Why do I need CompX?
             </div>
             <div className="collapse-content text-primary-content/70 font-thin">
               <p>

@@ -21,13 +21,13 @@ body {
   ); /* Use the custom property for background color */
 }
 
-.tippy-box[data-theme~="tabx"] {
-  background-color: oklch(70.76% 0.197 46.46);
+.tippy-box[data-theme~="compx"] {
+  background-color: #06ab78;
   color: oklch(31.72% 0.021 281.35);
 }
 
-.tippy-box[data-theme~="tabx"] .tippy-arrow {
-  color: oklch(70.76% 0.197 46.46);
+.tippy-box[data-theme~="compx"] .tippy-arrow {
+  color: #06ab78;
 }
 
 @layer utilities {

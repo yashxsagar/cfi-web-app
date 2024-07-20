@@ -29,9 +29,13 @@ const NavBar = () => {
           <Link href="/">FAQ</Link>
         </li>
       </ul>
-      <button className="btn bg-slate-100 btn-sm text-base-100 ml-3 md:ml-6 hover:bg-slate-300">
-        Login
-      </button>
+      <Link href="https://tabx.io/auth/login" passHref legacyBehavior>
+        <a target="_blank">
+          <button className="btn bg-slate-100 btn-sm text-base-100 ml-3 md:ml-6 hover:bg-slate-300">
+            Login
+          </button>
+        </a>
+      </Link>
     </div>
   );
 };
