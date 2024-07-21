@@ -12,11 +12,21 @@ export default function Home() {
     <>
       <main className="container max-w-4xl mx-auto my-auto flex flex-col gap-16 md:gap-44 px-4">
         <NavBar />
-        <Hero />
-        <ProsCons />
-        <HowTo />
-        <Pricing />
-        <FAQ />
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="proscons">
+          <ProsCons />
+        </section>
+        <section id="howto">
+          <HowTo />
+        </section>
+        <section id="pricing">
+          <Pricing />
+        </section>
+        <section id="faq">
+          <FAQ />
+        </section>
         {/* <div className="flex-1 items-center align-middle text-center">
         <h1>TabX Pro</h1>
       </div> */}

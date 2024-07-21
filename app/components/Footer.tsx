@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <footer className="bg-base-100 border-t border-primary-content/30">
       <div className="max-w-4xl mx-auto px-0 py-24">
-        <div className="flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-          <div className="w-80 max-w-full flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <div className="flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col align-middle items-center">
+          <div className="w-80 max-w-full flex-shrink-0 align-middle md:mx-0 mx-auto text-center md:text-left md:items-start">
             <Link
               href="/"
               prefetch={false}
-              className="flex flex-row gap-1 md:gap-3 items-center text-lg font-bold"
+              className="flex flex-col gap-1 md:flex md:flex-row  md:gap-3 justify-center items-center md:items-start md:justify-start text-lg font-bold"
             >
               <Image
                 src={compXLogo}
@@ -21,7 +21,7 @@ const Footer = () => {
                 //   width={"30"}
                 className="h-10 w-11"
               />
-              <h1 className="font-semibold">CompX</h1>
+              <h1 className="font-semibold my-2">CompX</h1>
             </Link>
             <h6 className="mt-3 text-sm text-accent-content/60 leading-relaxed">
               Get Paid, not Played!
@@ -43,10 +43,10 @@ const Footer = () => {
                 >
                   Support
                 </a>
-                <a className="link link-hover" href="/#pricing">
+                <a className="link link-hover" href="#pricing">
                   Pricing
                 </a>
-                <a href="/#affiliate" className="link link-hover">
+                <a href="#faq" className="link link-hover">
                   FAQ
                 </a>
               </div>
@@ -70,14 +70,14 @@ const Footer = () => {
               </div>
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
                 <a
-                  href="https://marclou.beehiiv.com/"
+                  href="https://chrome.tabx.io/add"
                   target="_blank"
                   className="link link-hover"
                 >
                   TabX
                 </a>
                 <a
-                  href="https://indiepa.ge/"
+                  href="https://x.com/YashSantani"
                   target="_blank"
                   className="flex flex-row items-center space-x-1"
                 >
@@ -133,7 +133,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <h5 className="text-primary-content/90 text-sm">
+        <br className="sm:hidden" />
+        <h5 className="text-primary-content/90 text-sm text-center md:text-start">
           Made with 💛 by{" "}
           <Link
             href="https://linkedin.com/in/yashsagar"

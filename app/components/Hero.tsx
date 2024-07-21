@@ -21,7 +21,7 @@ const Hero = () => {
     { image: ArnabCircular, role: "Research Scientist" },
   ];
   return (
-    <div className="min-h-[60vh] flex flex-col justify-normal items-center gap-y-20 overflow-visible">
+    <div className="min-h-[60vh] flex flex-col justify-normal items-center gap-y-20 overflow-visible px-2">
       <h1 className="text-base-content font-extrabold text-3xl text-center lg:text-6xl tracking-tight md:-mb-4">
         {"Assess the fair value of your job and get paid,"}{" "}
         <br className="hidden md:block" />
@@ -34,7 +34,7 @@ const Hero = () => {
         Get instant clarity on what your peers are getting paid in your area for
         the same job role
       </p>
-      <div className="grid justify-items-center">
+      <div className="grid justify-items-center px-8 md:px-0">
         <ul className="grid-cols-2 justify-items-center gap-2 text-neutral-content -m-7">
           <li className="flex flex-row gap-2 items-center">
             <CheckMark color={"#03fcbe"} /> Use the tool inside your Notion

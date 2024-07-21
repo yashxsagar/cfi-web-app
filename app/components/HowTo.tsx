@@ -11,8 +11,13 @@ const HowTo = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.style.transform = "scale(1.25)"; // Zoom the video
-      videoRef.current.style.transformOrigin = "center"; // Center the zoom effect
+      if (window.innerWidth >= 640) {
+        // Apply zoom only for devices larger than sm (640px)
+        videoRef.current.style.transform = "scale(1.25)"; // Zoom the video
+        videoRef.current.style.transformOrigin = "center"; // Center the zoom effect
+      } else {
+        videoRef.current.style.transform = "scale(1)"; // Reset zoom for smaller devices
+      }
     }
   }, [media]);
 
