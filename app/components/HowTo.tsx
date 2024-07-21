@@ -1,11 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const HowTo = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   const [media, setMedia] = useState<"one" | "two" | "three">("one");
   const handleMediaChange = (value: "one" | "two" | "three") => {
     setMedia(value);
   };
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.style.transform = "scale(1.25)"; // Zoom the video
+      videoRef.current.style.transformOrigin = "center"; // Center the zoom effect
+    }
+  }, [media]);
 
   const renderClip = () => {
     switch (media) {
@@ -13,6 +22,7 @@ const HowTo = () => {
         return (
           <video
             key={`${media}. clip`}
+            ref={videoRef}
             className="px-2 md:px-0 rounded-3xl w-full sm:w-[26rem] sm:-m-2 sm:p-2 bg-base-100"
             width={"500"}
             height={"500"}
@@ -29,6 +39,7 @@ const HowTo = () => {
         return (
           <video
             key={`${media}. clip`}
+            ref={videoRef}
             className="px-2 md:px-0 rounded-3xl w-full sm:w-[26rem] sm:-m-2 sm:p-2 bg-base-100"
             width={"500"}
             height={"500"}
@@ -45,6 +56,7 @@ const HowTo = () => {
         return (
           <video
             key={`${media}. clip`}
+            ref={videoRef}
             className="px-2 md:px-0 rounded-3xl w-full sm:w-[26rem] sm:-m-2 sm:p-2 bg-base-100"
             width={"500"}
             height={"500"}
@@ -61,6 +73,7 @@ const HowTo = () => {
         return (
           <video
             key={`${media}. clip`}
+            ref={videoRef}
             className="px-2 md:px-0 rounded-3xl w-full sm:w-[26rem] sm:-m-2 sm:p-2 bg-base-100"
             width={"500"}
             height={"500"}
@@ -77,12 +90,12 @@ const HowTo = () => {
   };
 
   return (
-    <section className="min-h-[60vh] py-24 px-0 md:py-32 md:px-4 space-y-24 md:space-y-32 max-w-5xl mx-auto bg-base-100 ">
+    <section className="min-h-[60vh] py-24 px-0 md:py-32 md:px-2 space-y-24 md:space-y-32 max-w-5xl mx-auto bg-base-100 ">
       <h2 className="font-extrabold text-center text-primary-content text-4xl lg:text-5xl tracking-tight mb-12 md:mb-24">
         Assess your true worth SupaFast!
       </h2>
       <div className="flex flex-col md:flex-row gap-12 md:gap-24">
-        <div className="grid grid-cols-1 items-center gap-8 text-secondary-content align-middle sm:gap-12 lg:grid-cols-2 lg:gap-24">
+        <div className="grid grid-cols-1 items-center gap-8 text-secondary-content align-middle sm:gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <div className="collapse collapse-plus">
               <input

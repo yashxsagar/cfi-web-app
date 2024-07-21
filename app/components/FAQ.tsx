@@ -3,7 +3,7 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <div className="py-24 max-w-7xl mx-auto px-0 md:px-4">
+    <div className="min-h-[75vh] py-24 max-w-7xl mx-auto px-0 md:px-4">
       <div className="flex flex-col md:flex-row gap-12">
         <div className="flex flex-col text-center md:text-left basis-1/3">
           <p className="inline-block font-semibold text-primary-content mb-4 text-xl">
