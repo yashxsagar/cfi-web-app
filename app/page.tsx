@@ -1,11 +1,11 @@
 import Image from "next/image";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
-import ProsCons from "./components/ProsCons";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import HowTo from "./components/HowTo";
 import Footer from "./components/Footer";
+import FairnessScale from "./components/FairnessScale";
 
 export default function Home() {
   return (
@@ -15,8 +15,8 @@ export default function Home() {
         <section id="hero">
           <Hero />
         </section>
-        <section id="proscons">
-          <ProsCons />
+        <section id="scale">
+          <FairnessScale />
         </section>
         <section id="howto">
           <HowTo />
