@@ -23,10 +23,10 @@ const NavBar = () => {
       </Link>
       <ul className="flex flex-row disc justify-center list-none gap-8 md:gap-14 ">
         <li>
-          <Link href="/">Pricing</Link>
+          <Link href="/#pricing">Pricing</Link>
         </li>
         <li>
-          <Link href="/">FAQ</Link>
+          <Link href="/#faq">FAQ</Link>
         </li>
       </ul>
       <Link href="https://tabx.io/auth/login" passHref legacyBehavior>

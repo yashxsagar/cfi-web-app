@@ -168,7 +168,7 @@ const FairnessScale = () => {
             </div>
             <div className="timeline-end flex flex-row">
               <p className="text-base-100">XXXXXX</p>
-              <h5>{">"}15%</h5>
+              <h5>{">+"}15%</h5>
               <p className="text-base-100">XXXXXX</p>
             </div>
           </li>

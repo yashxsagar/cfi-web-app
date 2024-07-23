@@ -59,7 +59,7 @@ const Footer = () => {
                 <a className="link link-hover" href="/tos">
                   Terms of services
                 </a>
-                <a className="link link-hover" href="/privacy-policy">
+                <a className="link link-hover" href="/pp">
                   Privacy policy
                 </a>
               </div>
@@ -112,7 +112,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://poopup.co/"
+                  // href="https://poopup.co/"
                   target="_blank"
                   className="link link-hover flex flex-row gap-2"
                 >
