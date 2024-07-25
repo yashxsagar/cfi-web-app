@@ -5,6 +5,9 @@ import compXLogo from "@/public/images/CompXLogo.png";
 import Image from "next/image";
 import { UserPayload } from "../utils/jwt";
 import LogoutIcon from "./LogoutIcon";
+import { useState } from "react";
+import { handleLogout } from "../utils/logout";
+import LogoutIconModal from "./LogoutIconModal";
 
 interface NavBarProps {
   user: UserPayload | null;
@@ -12,6 +15,7 @@ interface NavBarProps {
 
 const NavBar = ({ user }: NavBarProps) => {
   console.log(user);
+  const [isModalOpen, setModalOpen] = useState(false);
   return (
     <div className="navbar-center flex flex-row justify-between items-center algn-middle my-4">
       <Link
@@ -62,13 +66,32 @@ const NavBar = ({ user }: NavBarProps) => {
               <a>{user.email}</a>
             </li>
             <li>
-              <button className="btn-ghost">
+              <button className="btn-ghost" onClick={() => setModalOpen(true)}>
                 <div className="flex flex-row gap-2 items-center align-middle">
                   Logout <LogoutIcon />
                 </div>
               </button>
             </li>
           </ul>
+        </div>
+      )}
+      {isModalOpen && (
+        <div className="modal modal-open">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg">Confirm Logout</h3>
+            <p className="py-4">Are you sure you want to logout?</p>
+            <div className="modal-action gap-4">
+              <button className="btn btn-error" onClick={handleLogout}>
+                Logout <LogoutIconModal />
+              </button>
+              <button
+                className="btn btn-primary"
+                onClick={() => setModalOpen(false)}
+              >
+                No
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
