@@ -11,8 +11,13 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
 import "tippy.js/themes/translucent.css";
 import Link from "next/link";
+import { UserPayload } from "../utils/jwt";
 
-const Hero = () => {
+interface HeroProps {
+  user: UserPayload | null;
+}
+
+const Hero = ({ user }: HeroProps) => {
   const reviewers = [
     { image: AjayCircular, role: "Financial Analyst" },
     { image: VinayakCircular, role: "Lawyer" },
@@ -35,19 +40,25 @@ const Hero = () => {
         the same job role
       </p>
       <div className="grid justify-items-center px-8 md:px-0">
-        <ul className="grid-cols-2 justify-items-center gap-2 text-neutral-content -m-7">
+        <ul className="grid-cols-2 justify-items-center gap-2 -space-y-2 md:space-y-2 text-neutral-content -m-7">
           <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} /> Use the tool inside your Notion
-            workspace
+            <CheckMark color={"#03fcbe"} />
+            <p role="div"> Use the tool inside your Notion workspace</p>
           </li>
           <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} /> Obtain super easy-to-understand
-            fairness remarks
+            <CheckMark color={"#03fcbe"} />
+            <p role="div" className="mt-5 md:mt-0">
+              Obtain super easy-to-understand fairness{" "}
+              <br className="md:hidden" />
+              remarks
+            </p>
           </li>
           <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} /> Save time spent on cycling through{" "}
-            <br className="md:hidden" />
-            Glassdoor and LinkedIn JDs
+            <CheckMark color={"#03fcbe"} />
+            <p role="div" className="mt-5 md:mt-0">
+              Save time spent on cycling through
+              <br className="md:hidden" /> Glassdoor and LinkedIn JDs
+            </p>
           </li>
         </ul>
       </div>

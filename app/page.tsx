@@ -6,14 +6,24 @@ import FAQ from "./components/FAQ";
 import HowTo from "./components/HowTo";
 import Footer from "./components/Footer";
 import FairnessScale from "./components/FairnessScale";
+import { cookies } from "next/headers";
+import { decodeJwt, UserPayload } from "./utils/jwt";
 
 export default function Home() {
+  const cookieStore = cookies();
+  const token = cookieStore.get("jwt")?.value ?? null;
+
+  let user: UserPayload | null = null;
+
+  if (token) {
+    user = decodeJwt(token);
+  }
   return (
     <>
       <main className="container max-w-4xl mx-auto my-auto flex flex-col gap-16 md:gap-44 px-4">
-        <NavBar />
+        <NavBar user={user} />
         <section id="hero">
-          <Hero />
+          <Hero user={user} />
         </section>
         <section id="scale">
           <FairnessScale />
