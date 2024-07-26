@@ -16,7 +16,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .json({ message: "Missing or invalid token or workspace URL" });
   }
 
-  const cookies = new Cookies(req, res);
+  const cookies = new Cookies(req, res, {
+    secure: process.env.NODE_ENV === "production",
+  });
   const isProduction = process.env.NODE_ENV === "production";
 
   // Set the JWT cookie with the specified properties
