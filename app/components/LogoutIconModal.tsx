@@ -9,9 +9,9 @@ const LogoutIconModal = () => {
       viewBox="0 0 24 24"
       fill="#30313d"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-power-off"
     >
       <path d="M18.36 6.64A9 9 0 0 1 20.77 15" />

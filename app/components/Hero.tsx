@@ -62,7 +62,12 @@ const Hero = ({ user }: HeroProps) => {
           </li>
         </ul>
       </div>
-      <Link href="https://tabx.io/auth/login" passHref legacyBehavior>
+      <Link
+        href="https://tabx.io/auth/login"
+        passHref
+        prefetch={false}
+        legacyBehavior
+      >
         <a target="_blank">
           <button className="btn btn-primary flex flex-row gap-1 align-middle items-center content-center justify-item text-primary-content text-base sm:w-4/12 md:w-full group">
             Login with Notion

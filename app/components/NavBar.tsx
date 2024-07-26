@@ -81,7 +81,13 @@ const NavBar = ({ user }: NavBarProps) => {
             <h3 className="font-bold text-lg">Confirm Logout</h3>
             <p className="py-4">Are you sure you want to logout?</p>
             <div className="modal-action gap-4">
-              <button className="btn btn-error" onClick={handleLogout}>
+              <button
+                className="btn btn-error"
+                onClick={() => {
+                  setModalOpen(false);
+                  handleLogout();
+                }}
+              >
                 Logout <LogoutIconModal />
               </button>
               <button

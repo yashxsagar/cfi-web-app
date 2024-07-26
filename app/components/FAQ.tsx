@@ -21,11 +21,12 @@ const FAQ = () => {
             </div>
             <div className="collapse-content text-primary-content/70 font-thin">
               <p>
-                Are you someone who's about to join a new job or switch gigs or
-                awaitng your appraisal. How do you know whether the comp offered
-                by your HR manager is fair or not? CompX does exactly that. It
-                tells you the competitiveness of your pay while drawing from
-                hard objective wage disclosures data from the US Dept. of Labor
+                Are you someone who&apos;s about to join a new job or switch
+                gigs or awaitng your appraisal. How do you know whether the comp
+                offered by your HR manager is fair or not? CompX does exactly
+                that. It tells you the competitiveness of your pay while drawing
+                from hard objective wage disclosures data from the US Dept. of
+                Labor
               </p>
             </div>
           </div>
@@ -243,8 +244,8 @@ const FAQ = () => {
                 for the ~275 odd Job Roles that we support and are listed in the
                 dropdown fo the Job Role column of the CompX Fairness Indication
                 Notion page. If you proceed to add custom Job Role(s) the app
-                won't be able to fetch the Compensation Assessment output for
-                those entries
+                won&apos;t be able to fetch the Compensation Assessment output
+                for those entries
               </p>
             </div>
           </div>
@@ -302,9 +303,9 @@ const FAQ = () => {
                   Notion, grant the requested permissions and on the final
                   screen, choose option 2, titled{" "}
                   <b>Select pages to share with CompX - CFI</b>. From the pages
-                  list, choose <b>CompX Fairness Indicator'</b> and you should
-                  be good to go - the Notion page will start issuing
-                  compensation assessment outputs
+                  list, choose <b>CompX Fairness Indicator</b> and you should be
+                  good to go - the Notion page will start issuing compensation
+                  assessment outputs
                 </li>
               </ol>
             </div>
