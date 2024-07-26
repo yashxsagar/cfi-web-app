@@ -3,7 +3,9 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Cookies from "cookies";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const cookies = new Cookies(req, res);
+  const cookies = new Cookies(req, res, {
+    secure: process.env.NODE_ENV === "production",
+  });
   cookies.set("jwt", "", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
