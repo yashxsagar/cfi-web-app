@@ -6,8 +6,10 @@ import Image from "next/image";
 import { UserPayload } from "../utils/jwt";
 import LogoutIcon from "./LogoutIcon";
 import { useState } from "react";
-import { handleLogout } from "../utils/logout";
+// import { handleLogout } from "../utils/logout";
 import LogoutIconModal from "./LogoutIconModal";
+import LogoutButton from "./LogoutButton";
+import GoIcon from "./GoIcon";
 
 interface NavBarProps {
   user: UserPayload | null;
@@ -57,13 +59,20 @@ const NavBar = ({ user }: NavBarProps) => {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu bg-base-100 rounded-box border-base-content border-2 z-[1] w-52 p-2 shadow"
+            className="dropdown-content menu bg-base-100 rounded-box border-base-content border-2 z-[1] w-52 py-2 pl-2 pr-0 shadow"
           >
             <li>
               <a>{user.username}</a>
             </li>
             <li>
               <a>{user.email}</a>
+            </li>
+            <li>
+              <a>
+                <div className="flex flex-row gap-2 items-center align-middle">
+                  CompX Notion Table <GoIcon />
+                </div>
+              </a>
             </li>
             <li>
               <button className="btn-ghost" onClick={() => setModalOpen(true)}>
@@ -81,15 +90,17 @@ const NavBar = ({ user }: NavBarProps) => {
             <h3 className="font-bold text-lg">Confirm Logout</h3>
             <p className="py-4">Are you sure you want to logout?</p>
             <div className="modal-action gap-4">
-              <button
+              {/* <button
                 className="btn btn-error"
                 onClick={() => {
                   setModalOpen(false);
                   handleLogout();
                 }}
-              >
+              > */}
+              <LogoutButton setModalOpen={setModalOpen}>
                 Logout <LogoutIconModal />
-              </button>
+              </LogoutButton>
+              {/* </button> */}
               <button
                 className="btn btn-primary"
                 onClick={() => setModalOpen(false)}

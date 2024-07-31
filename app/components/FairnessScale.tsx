@@ -14,14 +14,15 @@ const FairnessScale = () => {
         </p>
       </div>
       <div className="flex flex-col mx-1 min-h-[30vh] md:flex-row items-center md:-mx-32">
-        <ul className="timeline timeline-vertical md:timeline-horizontal">
+        <ul className="timeline timeline-vertical lg:timeline-horizontal">
           <li>
             <div className="timeline-start flex flex-row">
               <p className="text-base-100">XXXXXX</p>
-              <h5>{"<"}-15%</h5>
+              {/* <h5>{"<"}-15%</h5> */}
+              <h5>-30%</h5>
               <p className="text-base-100">XXXXXX</p>
             </div>
-            <br className="md:hidden" />
+            <br className="lg:hidden" />
             <div className="timeline-middle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +47,7 @@ const FairnessScale = () => {
               <h5>-15%</h5>
               <p className="text-base-100">XXXXXX</p>
             </div>
-            <br className="md:hidden" />
+            <br className="lg:hidden" />
             <div className="timeline-middle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -96,13 +97,13 @@ const FairnessScale = () => {
             </div>
             {/* <div className="timeline-end"></div> */}
             <div className="timeline-end text-base-100">XXXXXXXXXXXXX</div>
-            <br className="md:hidden" />
+            <br className="lg:hidden" />
             <hr className="bg-purple-400" />
           </li>
           <li>
             <hr className="bg-purple-400" />
             <div className="timeline-start">Solid</div>
-            <br className="md:hidden" />
+            <br className="lg:hidden" />
             <div className="timeline-middle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +128,7 @@ const FairnessScale = () => {
           <li>
             <hr className="bg-info" />
             <div className="timeline-start">Very Solid</div>
-            <br className="md:hidden" />
+            <br className="lg:hidden" />
             <div className="timeline-middle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +169,8 @@ const FairnessScale = () => {
             </div>
             <div className="timeline-end flex flex-row">
               <p className="text-base-100">XXXXXX</p>
-              <h5>{">+"}15%</h5>
+              {/* <h5>{">+"}15%</h5> */}
+              <h5>{"+"}30%</h5>
               <p className="text-base-100">XXXXXX</p>
             </div>
           </li>

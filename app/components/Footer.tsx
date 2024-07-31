@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className="bg-base-100 border-t border-primary-content/30">
       <div className="max-w-4xl mx-auto px-0 py-24">
-        <div className="flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col align-middle items-center">
-          <div className="w-80 max-w-full flex-shrink-0 align-middle md:mx-0 mx-auto text-center md:text-left md:items-start">
+        <div className="flex md:items-start md:flex-row md:flex-nowrap flex-wrap flex-col align-middle items-center">
+          <div className="w-80 max-w-full flex-shrink-0 align-middle md:ml-10 lg:mx-0 mx-auto text-center md:text-left md:items-start">
             <Link
               href="/"
               prefetch={false}
@@ -29,8 +29,8 @@ const Footer = () => {
               Copyright © 2024 - All rights reserved
             </h6>
           </div>
-          <div className="flex-grow flex flex-wrap justify-center -mb-10 md:mt-0 mt-10 text-center md:pl-24">
-            <div className="lg:w-1/3 md:w-1/2 w-full px-4">
+          <div className="flex-grow flex flex-wrap justify-center -mb-10 md:mt-0 mt-10 text-center lg:pl-20">
+            <div className="lg:w-1/3 md:w-1/4 w-full lg:px-4">
               <div className="footer-title font-semibold text-neutral-content tracking-widest text-sm md:text-left mb-3">
                 LINKS
               </div>
@@ -51,12 +51,12 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="lg:w-1/3 md:w-1/2 w-full px-4">
+            <div className="lg:w-1/3 md:w-1/4 w-full lg:px-4">
               <div className="footer-title font-semibold text-neutral-content tracking-widest text-sm md:text-left mb-3">
                 LEGAL
               </div>
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
-                <a className="link link-hover" href="/tos">
+                <a className="link link-hover text-start" href="/tos">
                   Terms of services
                 </a>
                 <a className="link link-hover" href="/pp">
@@ -64,7 +64,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="lg:w-1/3 md:w-1/2 w-full px-10">
+            <div className="lg:w-1/3 md:w-1/4 w-full md:pl-10 lg:pl-14">
               <div className="footer-title font-semibold text-neutral-content tracking-widest text-sm md:text-left mb-3">
                 MORE
               </div>
@@ -114,7 +114,7 @@ const Footer = () => {
                 <a
                   // href="https://poopup.co/"
                   target="_blank"
-                  className="link link-hover flex flex-row gap-2"
+                  className="link link-hover flex flex-row gap-2 items-center"
                 >
                   Contribute
                   <svg
@@ -134,7 +134,7 @@ const Footer = () => {
           </div>
         </div>
         <br className="sm:hidden" />
-        <h5 className="text-primary-content/90 text-sm text-center md:text-start">
+        <h5 className="text-primary-content/90 text-sm text-center md:text-start md:pl-10 lg:pl-0">
           Made with 💛 by{" "}
           <Link
             href="https://linkedin.com/in/yashsagar"

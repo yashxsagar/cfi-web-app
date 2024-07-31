@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import FairnessScale from "./components/FairnessScale";
 import { cookies } from "next/headers";
 import { decodeJwt, UserPayload } from "./utils/jwt";
+import RefreshCache from "./components/refresh-cache";
+import checkifCookieSet from "./checkIfCookieSet";
 
 export default function Home() {
   const cookieStore = cookies();
@@ -21,6 +23,7 @@ export default function Home() {
   return (
     <>
       <main className="container max-w-4xl mx-auto my-auto flex flex-col gap-16 md:gap-44 px-4">
+        <RefreshCache check={checkifCookieSet} />
         <NavBar user={user} />
         <section id="hero">
           <Hero user={user} />
@@ -32,7 +35,7 @@ export default function Home() {
           <HowTo />
         </section>
         <section id="pricing">
-          <Pricing />
+          <Pricing user={user} />
         </section>
         <section id="faq">
           <FAQ />

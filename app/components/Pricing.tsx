@@ -1,6 +1,12 @@
-const Pricing = () => {
+import { UserPayload } from "../utils/jwt";
+
+interface PricingProps {
+  user: UserPayload | null;
+}
+
+const Pricing = ({ user }: PricingProps) => {
   return (
-    <div className="min-h-[60vh] py-24 px-0 md:py-32 bg-base-100 flex flex-col justify-normal items-center space-y-24 md:space-y-32 overflow-visible">
+    <div className="min-h-[60vh] py-24 px-0 md:px-16 lg:px-0 md:py-32 bg-base-100 flex flex-col justify-normal items-center space-y-24 md:space-y-32 overflow-visible">
       <section className="flex flex-col items-center gap-7">
         <div className="badge badge-primary badge-outline animate-pulse whitespace-nowrap">
           <svg
@@ -21,7 +27,7 @@ const Pricing = () => {
           Stop manually sifting through job descriptions on job sites
         </h1>
       </section>
-      <div className="flex flex-col md:flex-row md:w-6/12 gap-10 p-2 md:p-4">
+      <div className="flex flex-col md:flex-row md:w-8/12 lg:w-6/12 gap-10 p-2 md:p-4">
         {/* <div className="grid flex-grow card gap-5 bg-slate-700 rounded-box p-4">
           <div className="flex flex-wrap gap-2">
             <div className="flex flex-col justify-end mb-[4px] text-lg ">
@@ -258,7 +264,7 @@ const Pricing = () => {
               className="btn btn-primary btn-block group text-base-100"
               href="https://buy.stripe.com/eVa00O1Zmd5BeEobIJ?prefilled_promo_code=LAUNCH"
             >
-              Get CompX
+              {(user && <p>Go To CompX</p>) || <p>Get CompX</p>}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

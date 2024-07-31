@@ -95,7 +95,7 @@ const HowTo = () => {
   };
 
   return (
-    <section className="min-h-[60vh] py-24 px-0 md:py-32 md:px-2 space-y-24 md:space-y-32 max-w-5xl mx-auto bg-base-100 ">
+    <section className="min-h-[60vh] py-24 px-0 md:py-32 md:px-20 lg:px-2 space-y-24 md:space-y-32 max-w-5xl mx-auto bg-base-100 ">
       <h2 className="font-extrabold text-center text-primary-content text-4xl lg:text-5xl tracking-tight mb-12 md:mb-24">
         Assess your true worth SupaFast!
       </h2>
