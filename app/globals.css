@@ -17,7 +17,7 @@
 body {
   color: var(--base-content); /* Use the custom property for text color */
   background-color: var(
-    --primary
+    --base-100
   ); /* Use the custom property for background color */
 }
 

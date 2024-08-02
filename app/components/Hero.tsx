@@ -14,13 +14,14 @@ import Link from "next/link";
 import { UserPayload } from "../utils/jwt";
 import handleLogin from "../utils/handleLogin";
 import LoadingSpinner from "./LoadingSpinner";
+import { useClientContext } from "../context/ClientStateContext";
 
 interface HeroProps {
   user: UserPayload | null;
 }
 
 const Hero = ({ user }: HeroProps) => {
-  const [logging, setLogging] = useState(false);
+  const { logging, setLogging } = useClientContext();
   const reviewers = [
     { image: AjayCircular, role: "Financial Analyst" },
     { image: VinayakCircular, role: "Lawyer" },
@@ -43,24 +44,29 @@ const Hero = ({ user }: HeroProps) => {
         the same job role
       </p>
       <div className="grid justify-items-center px-8 md:px-0">
-        <ul className="grid-cols-2 justify-items-center gap-2 -space-y-2 md:space-y-2 text-neutral-content -m-7">
-          <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} />
+        <ul className="grid-cols-2 justify-items-center gap-2 space-y-2 md:space-y-2 text-neutral-content -m-7">
+          <li className="flex flex-row gap-2 items-start align-start">
+            <div className="w-4 mt-1">
+              <CheckMark color={"#03fcbe"} />
+            </div>
             <p role="div"> Use the tool inside your Notion workspace</p>
           </li>
-          <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} />
-            <p role="div" className="mt-5 md:mt-0">
-              Obtain super easy-to-understand fairness{" "}
-              <br className="md:hidden" />
-              remarks
+          <li className="flex flex-row gap-2 items-start align-start">
+            <div className="w-4 mt-1">
+              <CheckMark color={"#03fcbe"} />
+            </div>
+            <p role="div" className="mt-0 md:mt-0">
+              Obtain super easy-to-understand fairness remarks
+              {/* <br className="md:hidden" /> */}
             </p>
           </li>
-          <li className="flex flex-row gap-2 items-center">
-            <CheckMark color={"#03fcbe"} />
-            <p role="div" className="mt-5 md:mt-0">
-              Save time spent on cycling through
-              <br className="md:hidden" /> Glassdoor and LinkedIn JDs
+          <li className="flex flex-row gap-2 items-start align-start">
+            <div className="w-4 mt-1">
+              <CheckMark color={"#03fcbe"} />
+            </div>
+            <p role="div" className="mt-0 md:mt-0">
+              Save time spent on cycling through Glassdoor and LinkedIn JDs
+              {/* <br className="md:hidden" />  */}
             </p>
           </li>
         </ul>
@@ -74,7 +80,7 @@ const Hero = ({ user }: HeroProps) => {
         <a target="_blank"> */}
       <div>
         <button
-          className="btn btn-primary flex flex-row gap-1 align-middle items-center content-center justify-item text-primary-content text-base sm:w-4/12 md:w-full group"
+          className="btn btn-primary flex flex-row gap-1 align-middle items-center content-center justify-item text-primary-content text-base sm:w-full md:w-full group"
           onClick={() => handleLogin({ setLogging })}
         >
           {(user && <p>Hello {user.username.split(" ")[0]} </p>) || (

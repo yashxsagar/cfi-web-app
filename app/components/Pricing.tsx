@@ -1,10 +1,15 @@
+"use client";
 import { UserPayload } from "../utils/jwt";
+import handleLogin from "../utils/handleLogin";
+import { useClientContext } from "../context/ClientStateContext";
+import LoadingSpinner from "./LoadingSpinner";
 
 interface PricingProps {
   user: UserPayload | null;
 }
 
 const Pricing = ({ user }: PricingProps) => {
+  const { logging, setLogging } = useClientContext();
   return (
     <div className="min-h-[60vh] py-24 px-0 md:px-16 lg:px-0 md:py-32 bg-base-100 flex flex-col justify-normal items-center space-y-24 md:space-y-32 overflow-visible">
       <section className="flex flex-col items-center gap-7">
@@ -260,24 +265,26 @@ const Pricing = ({ user }: PricingProps) => {
             </li>
           </ul>
           <div className="space-y-2">
-            <a
+            <button
               className="btn btn-primary btn-block group text-base-100"
-              href="https://buy.stripe.com/eVa00O1Zmd5BeEobIJ?prefilled_promo_code=LAUNCH"
+              onClick={() => handleLogin({ setLogging })}
             >
               {(user && <p>Go To CompX</p>) || <p>Get CompX</p>}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="size-6"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
+              {(logging && <LoadingSpinner size={6} />) || (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              )}
+            </button>
             <p className="text-sm text-center text-primary font-medium relative">
               One-time sign up, then{" "}
               <span className="underline">

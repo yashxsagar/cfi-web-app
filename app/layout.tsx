@@ -2,6 +2,17 @@ import "./globals.css";
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import { Bricolage_Grotesque } from "next/font/google";
+import dynamic from "next/dynamic";
+
+const ClientStateContextProvider = dynamic(
+  () =>
+    import("./context/ClientStateContext").then(
+      (mod) => mod.ClientStateContextProvider
+    ),
+  {
+    ssr: false, // Disable server-side rendering for the provider
+  }
+);
 
 const grotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -22,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <body className={grotesque.className}>{children}</body>
+      <body className={grotesque.className}>
+        <ClientStateContextProvider>{children}</ClientStateContextProvider>
+      </body>
     </html>
   );
 }

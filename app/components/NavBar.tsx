@@ -8,6 +8,9 @@ import LogoutIcon from "./LogoutIcon";
 import { useState } from "react";
 // import { handleLogout } from "../utils/logout";
 import LogoutIconModal from "./LogoutIconModal";
+import handleLogin from "../utils/handleLogin";
+import { useClientContext } from "../context/ClientStateContext";
+import LoadingSpinner from "./LoadingSpinner";
 import LogoutButton from "./LogoutButton";
 import GoIcon from "./GoIcon";
 
@@ -17,7 +20,9 @@ interface NavBarProps {
 
 const NavBar = ({ user }: NavBarProps) => {
   console.log(user);
+  const { logging, setLogging } = useClientContext();
   const [isModalOpen, setModalOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <div className="navbar-center flex flex-row justify-between items-center algn-middle my-4">
       <Link
@@ -51,8 +56,19 @@ const NavBar = ({ user }: NavBarProps) => {
           </a>
         </Link>
       ) : (
-        <div className="dropdown dropdown-hover dropdown-bottom dropdown-end ml-3 md:ml-6">
-          <div className="avatar placeholder online">
+        <div
+          className={`dropdown ${
+            dropdownOpen ? "dropdown-open" : ""
+          } dropdown-hover dropdown-bottom dropdown-end ml-3 md:ml-6`}
+        >
+          <div
+            tabIndex={0}
+            className="avatar placeholder online"
+            onTouchStart={() => {
+              setDropdownOpen(!dropdownOpen);
+            }}
+            onTouchEnd={() => setDropdownOpen(!dropdownOpen)}
+          >
             <div className="bg-base-100 border-accent-content border-2 text-base-content font-extrabold w-12 rounded-full">
               <span>{user.username[0]}</span>
             </div>
@@ -69,8 +85,12 @@ const NavBar = ({ user }: NavBarProps) => {
             </li>
             <li>
               <a>
-                <div className="flex flex-row gap-2 items-center align-middle">
-                  CompX Notion Table <GoIcon />
+                <div
+                  className="flex flex-row gap-2 items-center align-middle"
+                  onClick={() => handleLogin({ setLogging })}
+                >
+                  <p>CompX Notion Table</p>
+                  {(logging && <LoadingSpinner size={4} />) || <GoIcon />}
                 </div>
               </a>
             </li>
