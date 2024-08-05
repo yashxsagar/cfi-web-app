@@ -5,7 +5,7 @@ const pp = () => {
   const pp = `
 Last Updated: July 15, 2024
 
-CompX ("we," "us," or "our") operates the website https://tabx.io (the "Service").
+CompX ("we," "us," or "our") operates the website https://compx.app (the "Service").
 
 **Information Collection and Use**
 We collect and use the following types of information for providing our services:

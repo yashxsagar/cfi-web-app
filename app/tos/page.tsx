@@ -7,7 +7,7 @@ Last Updated: July 15, 2024
 
 Welcome to CompX!
   
-These Terms of Service ("Terms") govern your use of the CompX website at [https://tabs./io/pp](https://tabx.io) ("Website") and the services provided by CompX. By using our Website and services, you agree to these Terms.
+These Terms of Service ("Terms") govern your use of the CompX website at [https://compx.app](https://compx.app) ("Website") and the services provided by CompX. By using our Website and services, you agree to these Terms.
   
 **Description of CompX**
 CompX is a compensation fairness indicator platform that evaluates the market competitiveness of the compensation offered to you using wage disclosures data from the US Department of Labor.
@@ -16,7 +16,7 @@ CompX is a compensation fairness indicator platform that evaluates the market co
 When you use CompX, you gain the right to assess the fair monetary value of your job role at a given location in the US using a subjective scale called, the 'Fairness Scale' built by us. You own the content aka job/wage entries you key in using the Notion template but have no express rights over the algorithm used to compute the Fairness Indicator, Assessment Remarks and the Justification PDF report.
   
 **User Data and Privacy**
-We collect and store user data, including your name, email, profile picture, Notion provider id, Notion database id, Notion workspace url to personalize your experience and render our service accurately. For details on how we handle your data, please refer to our Privacy Policy at https://tabx.io/pp.
+We collect and store user data, including your name, email, profile picture, Notion provider id, Notion database id, Notion workspace url to personalize your experience and render our service accurately. For details on how we handle your data, please refer to our Privacy Policy at https://compx.app/pp.
   
 **Data Collection Methods**
 We may use web cookies and similar technologies to collect non-personal data for the purpose of improving our services and user experience.

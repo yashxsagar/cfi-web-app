@@ -283,7 +283,7 @@ const FAQ = () => {
                   b. Changes made to the Notion Page components such as page
                   title, page description, column names - Job Title, Location,
                   State, Fairness Indicator or so on - Go to the{" "}
-                  <Link href="https://tabx.io">CompX</Link> website and hit{" "}
+                  <Link href="https://compx.app">CompX</Link> website and hit{" "}
                   <b>Login with Notion</b> to re-authenticate with Notion. Our
                   app will embed a fresh copy of the CompX Fairness Indicator
                   Notion page. Start making entries into it and it should detch
@@ -298,7 +298,7 @@ const FAQ = () => {
                   tripe dot (•••) Menu on the top-right of your Notion
                   workspace, the page will stop issuing compensation assessment
                   for new records aka job entries. To fix it simply go to the{" "}
-                  <Link href="https://tabx.io">CompX</Link> website and hit{" "}
+                  <Link href="https://compx.app">CompX</Link> website and hit{" "}
                   <b>Login with Notion</b> button to re-authenticate with
                   Notion, grant the requested permissions and on the final
                   screen, choose option 2, titled{" "}

@@ -48,7 +48,11 @@ const NavBar = ({ user }: NavBarProps) => {
         </li>
       </ul>
       {!user ? (
-        <Link href="https://tabx.io/auth/login" passHref legacyBehavior>
+        <Link
+          href={`${process.env.NEXT_PUBLIC_API_URL}/auth/login`}
+          passHref
+          legacyBehavior
+        >
           <a target="_blank">
             <button className="btn bg-slate-100 btn-sm text-base-100 ml-3 md:ml-6 hover:bg-slate-300">
               Login
